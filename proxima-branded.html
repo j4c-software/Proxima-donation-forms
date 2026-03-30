@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate — Proxima</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f7f9;
+      padding: 24px 16px;
+    }
+
+    .donate-wrapper {
+      max-width: 680px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+
+    .donate-header {
+      background: #047190;
+      padding: 28px 32px;
+      color: #ffffff;
+    }
+
+    .donate-header h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      margin-bottom: 4px;
+    }
+
+    .donate-header p {
+      font-size: 0.95rem;
+      opacity: 0.88;
+    }
+
+    .donate-header .accent {
+      display: inline-block;
+      width: 40px;
+      height: 4px;
+      background: #F2B41E;
+      border-radius: 2px;
+      margin-top: 12px;
+    }
+
+    .donate-body {
+      padding: 32px;
+    }
+
+    /* ── Virtuous form overrides ── */
+    /* Virtuous renders inside this div; these rules cascade in */
+
+    .donate-body input[type="text"],
+    .donate-body input[type="email"],
+    .donate-body input[type="number"],
+    .donate-body input[type="tel"],
+    .donate-body select,
+    .donate-body textarea {
+      border: 1.5px solid #d0d5dd !important;
+      border-radius: 8px !important;
+      font-family: Arial, Helvetica, sans-serif !important;
+      font-size: 0.95rem !important;
+      padding: 10px 14px !important;
+      width: 100% !important;
+      transition: border-color 0.2s !important;
+    }
+
+    .donate-body input:focus,
+    .donate-body select:focus,
+    .donate-body textarea:focus {
+      outline: none !important;
+      border-color: #047190 !important;
+      box-shadow: 0 0 0 3px rgba(4,113,144,0.12) !important;
+    }
+
+    .donate-body button[type="submit"],
+    .donate-body input[type="submit"],
+    .donate-body .vg-btn-primary,
+    .donate-body button.btn-primary {
+      background: #047190 !important;
+      border: none !important;
+      border-radius: 8px !important;
+      color: #ffffff !important;
+      font-family: Arial, Helvetica, sans-serif !important;
+      font-size: 1rem !important;
+      font-weight: 700 !important;
+      padding: 12px 28px !important;
+      cursor: pointer !important;
+      transition: background 0.2s !important;
+      letter-spacing: 0.2px !important;
+    }
+
+    .donate-body button[type="submit"]:hover,
+    .donate-body input[type="submit"]:hover,
+    .donate-body .vg-btn-primary:hover,
+    .donate-body button.btn-primary:hover {
+      background: #035f79 !important;
+    }
+
+    /* Amount/frequency toggle buttons */
+    .donate-body .amount-option,
+    .donate-body .frequency-option,
+    .donate-body [class*="amount-btn"],
+    .donate-body [class*="frequency-btn"] {
+      border: 1.5px solid #047190 !important;
+      border-radius: 8px !important;
+      color: #047190 !important;
+      font-family: Arial, Helvetica, sans-serif !important;
+      font-weight: 600 !important;
+      cursor: pointer !important;
+      transition: all 0.15s !important;
+    }
+
+    .donate-body .amount-option.active,
+    .donate-body .amount-option:checked,
+    .donate-body .frequency-option.active,
+    .donate-body [class*="amount-btn"].active,
+    .donate-body [class*="selected"] {
+      background: #047190 !important;
+      color: #ffffff !important;
+    }
+
+    /* Labels */
+    .donate-body label {
+      font-family: Arial, Helvetica, sans-serif !important;
+      font-size: 0.85rem !important;
+      font-weight: 600 !important;
+      color: #344054 !important;
+      margin-bottom: 4px !important;
+      display: block !important;
+    }
+
+    /* Links */
+    .donate-body a {
+      color: #047190 !important;
+    }
+
+    /* Accent gold for any highlighted amount */
+    .donate-body [class*="featured"],
+    .donate-body [class*="highlight"] {
+      border-color: #F2B41E !important;
+      color: #F2B41E !important;
+    }
+
+    .donate-footer {
+      border-top: 1px solid #eee;
+      padding: 16px 32px;
+      text-align: center;
+      font-size: 0.78rem;
+      color: #888;
+    }
+
+    .donate-footer a { color: #047190; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="donate-wrapper">
+
+    <div class="donate-header">
+      <h1>Make a Donation</h1>
+      <p>Your generosity makes our work possible.</p>
+      <span class="accent"></span>
+    </div>
+
+    <div class="donate-body">
+      <script
+        src="https://cdn.virtuoussoftware.com/virtuous.embed.min.js"
+        data-vform="EC2B5B25-B5D3-4B4F-97A4-498DBEDE4298"
+        data-orgId="8106"
+        data-isGiving="true"
+        data-merchantType="StripeUnified"
+        data-dependencies="[]">
+      </script>
+    </div>
+
+    <div class="donate-footer">
+      Secure donation processed by <a href="https://www.virtuoussoftware.com" target="_blank">Virtuous</a>.
+      &nbsp;|&nbsp; Questions? <a href="mailto:info@liveproxima.org">info@liveproxima.org</a>
+    </div>
+
+  </div>
+</body>
+</html>
