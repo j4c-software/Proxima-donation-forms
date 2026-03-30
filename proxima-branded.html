@@ -169,6 +169,14 @@
     </div>
 
     <div class="donate-body">
+      <script>
+        let VirtuousForms = VirtuousForms || {};
+        VirtuousForms.settings = {
+          onSuccess: function(response) {
+            console.log('Donation successful', response);
+          }
+        };
+      </script>
       <script
         src="https://cdn.virtuoussoftware.com/virtuous.embed.min.js"
         data-vform="EC2B5B25-B5D3-4B4F-97A4-498DBEDE4298"
