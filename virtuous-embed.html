@@ -3,9 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Virtuous Form — Unstyled Preview</title>
+  <title>Virtuous Form — Preview</title>
+  <style>
+    #debug {
+      font-family: monospace;
+      font-size: 12px;
+      background: #f0f0f0;
+      border: 1px solid #ccc;
+      padding: 12px;
+      margin: 16px;
+      border-radius: 6px;
+      white-space: pre-wrap;
+    }
+  </style>
 </head>
 <body>
+  <div id="debug">Loading Virtuous form... watching for errors.</div>
+
+  <script>
+    const log = (msg) => {
+      document.getElementById('debug').textContent += '\n' + new Date().toISOString().slice(11,19) + ' ' + msg;
+    };
+    window.addEventListener('error', (e) => log('ERROR: ' + e.message + ' (' + e.filename + ':' + e.lineno + ')'), true);
+    window.addEventListener('unhandledrejection', (e) => log('PROMISE ERROR: ' + e.reason));
+    const observer = new MutationObserver(() => {
+      const vf = document.querySelector('[data-virtuous-form]');
+      if (vf) log('Virtuous div injected: ' + JSON.stringify(vf.dataset));
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+    setTimeout(() => log('Still waiting after 10s...'), 10000);
+    setTimeout(() => log('Still waiting after 20s...'), 20000);
+  </script>
+
   <script
     src="https://cdn.virtuoussoftware.com/virtuous.embed.min.js"
     data-vform="EC2B5B25-B5D3-4B4F-97A4-498DBEDE4298"
