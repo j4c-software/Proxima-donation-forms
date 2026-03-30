@@ -170,8 +170,8 @@
 
     <div class="donate-body">
       <script>
-        var VirtuousForms = VirtuousForms || {};
-        VirtuousForms.settings = {
+        window.VirtuousForms = window.VirtuousForms || {};
+        window.VirtuousForms.settings = {
           onSuccess: function(response) {
             console.log('Donation successful', response);
           }
