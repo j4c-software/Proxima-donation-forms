@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donation Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <form id="donation-form">
+      <h1>Make a Donation</h1>
+
+      <div class="field">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+      </div>
+
+      <div class="field">
+        <label>Amount</label>
+        <div class="amount-options">
+          <button type="button" class="amount-btn" data-amount="10">$10</button>
+          <button type="button" class="amount-btn" data-amount="25">$25</button>
+          <button type="button" class="amount-btn" data-amount="50">$50</button>
+          <button type="button" class="amount-btn" data-amount="100">$100</button>
+        </div>
+        <input type="number" id="custom-amount" name="amount" placeholder="Or enter custom amount" min="1" />
+      </div>
+
+      <div class="field">
+        <label for="message">Message (optional)</label>
+        <textarea id="message" name="message" rows="3" placeholder="Leave a note..."></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Donate Now</button>
+    </form>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

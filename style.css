@@ -1,0 +1,115 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #f4f6f9;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+main {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 480px;
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin-bottom: 1.75rem;
+  color: #1a1a2e;
+}
+
+.field {
+  margin-bottom: 1.25rem;
+}
+
+label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 0.4rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #1a1a2e;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #5b6ef5;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.amount-options {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.amount-btn {
+  flex: 1;
+  padding: 0.55rem 0;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #444;
+  transition: all 0.15s;
+  min-width: 60px;
+}
+
+.amount-btn:hover {
+  border-color: #5b6ef5;
+  color: #5b6ef5;
+}
+
+.amount-btn.selected {
+  background: #5b6ef5;
+  border-color: #5b6ef5;
+  color: #fff;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 0.85rem;
+  background: #5b6ef5;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s;
+}
+
+.submit-btn:hover {
+  background: #4355e8;
+}
