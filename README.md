@@ -9,7 +9,7 @@ Branded donation form for [Proxima Partners](https://www.liveproxima.org), embed
 
 ## How It Works
 
-The form is a single HTML file ([proxima-branded.html](proxima-branded.html)) that wraps the Virtuous embed script in Proxima's branding. It is hosted on GitHub Pages and embedded into the Wix site via an HTML iFrame widget.
+Each form is a self-contained HTML file under `forms/` that wraps the Virtuous embed script in Proxima's branding. Forms are hosted on GitHub Pages and embedded into the Wix site via an HTML iFrame widget.
 
 Any design changes are made here in the repo — the Wix embed never needs to be touched.
 
