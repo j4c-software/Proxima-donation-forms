@@ -4,7 +4,7 @@ Branded donation form for [Proxima Partners](https://www.liveproxima.org), embed
 
 ## Live URLs
 
-- **Preview:** [j4c-software.github.io/Proxima-donation-forms/proxima-branded.html](https://j4c-software.github.io/Proxima-donation-forms/proxima-branded.html)
+- **Preview:** [j4c-software.github.io/Proxima-donation-forms/forms/give-webpage/](https://j4c-software.github.io/Proxima-donation-forms/forms/give-webpage/)
 - **Production:** [www.liveproxima.org/give](https://www.liveproxima.org/give)
 
 ## How It Works
@@ -17,7 +17,7 @@ Any design changes are made here in the repo — the Wix embed never needs to be
 
 ```html
 <iframe
-  src="https://j4c-software.github.io/Proxima-donation-forms/proxima-branded.html"
+  src="https://j4c-software.github.io/Proxima-donation-forms/forms/give-webpage/"
   width="100%"
   height="900px"
   frameborder="0"
@@ -30,12 +30,14 @@ Any design changes are made here in the repo — the Wix embed never needs to be
 
 ```
 Proxima-donation-forms/
-├── proxima-branded.html   # Production branded form
-├── virtuous-embed.html    # Debug/test page for Virtuous embed
-├── virtuous-api-docs.md   # Virtuous API & Forms reference
-├── index.html             # Original hand-rolled form scaffold
-├── style.css              # Original form styles
-└── script.js              # Original form logic
+├── forms/
+│   └── give-webpage/
+│       └── index.html         # Proxima-branded Virtuous embed (give page)
+├── virtuous-embed.html        # Debug/test page for Virtuous embed
+├── virtuous-api-docs.md       # Virtuous API & Forms reference
+├── index.html                 # Original hand-rolled form scaffold
+├── style.css                  # Original form styles
+└── script.js                  # Original form logic
 ```
 
 ## Branding
