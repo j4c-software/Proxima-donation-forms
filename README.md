@@ -15,20 +15,30 @@ Any design changes are made here in the repo — the Wix embed never needs to be
 
 ## Wix Embed Code
 
+Paste the following into the Wix HTML Embed widget. The script resizes the widget dynamically so the form never scrolls or gets clipped.
+
 ```html
 <iframe
   src="https://j4c-software.github.io/Proxima-donation-forms/forms/give-webpage/"
-  width="100%"
-  height="900px"
-  frameborder="0"
-  scrolling="auto"
-  style="border:none;">
+  scrolling="no"
+  style="width:100%; height:1600px; border:none; overflow:hidden;"
+  id="donation-iframe">
 </iframe>
+
+<script>
+  window.addEventListener('message', function(e) {
+    if (e.data && e.data.type === 'iframeResize') {
+      var height = e.data.height;
+      document.getElementById('donation-iframe').style.height = height + 'px';
+      window.parent.postMessage(JSON.stringify({ key: 'height', value: height }), '*');
+    }
+  });
+</script>
 ```
 
 ## Project Structure
 
-```
+```text
 Proxima-donation-forms/
 ├── forms/
 │   └── give-webpage/

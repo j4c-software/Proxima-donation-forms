@@ -139,5 +139,15 @@
     </div>
 
   </div>
+  <script>
+    // Auto-resize: notify parent iframe of document height changes
+    function sendHeight() {
+      const height = document.documentElement.scrollHeight;
+      window.parent.postMessage({ type: 'iframeResize', height: height }, '*');
+    }
+    const ro = new ResizeObserver(sendHeight);
+    ro.observe(document.body);
+    sendHeight();
+  </script>
 </body>
 </html>
